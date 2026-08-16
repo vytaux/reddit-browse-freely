@@ -1,0 +1,19 @@
+{
+  "name": "reddit-browse-freely",
+  "version": "1.0.0",
+  "description": "Browse Reddit without signup popups interrupting your reading.",
+  "scripts": {
+    "build": "node build.js",
+    "build:chrome": "node build.js chrome",
+    "build:firefox": "node build.js firefox",
+    "test": "jest"
+  },
+  "packageManager": "pnpm@11.20.0",
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "jest-environment-jsdom": "^29.0.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  }
+}
