@@ -49,6 +49,14 @@ describe('restoreScroll', () => {
     expect(document.body.style.overflow).toBe('');
   });
 
+  test('removes rpl-scroll-lock class from body', () => {
+    document.body.classList.add('rpl-scroll-lock');
+
+    restoreScroll();
+
+    expect(document.body.classList.contains('rpl-scroll-lock')).toBe(false);
+  });
+
   test('does not throw when overflow not set', () => {
     document.body.style.overflow = '';
     expect(() => restoreScroll()).not.toThrow();

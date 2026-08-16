@@ -3,3 +3,7 @@
 [id*="upsell-dialog"] {
   display: none !important;
 }
+
+body.rpl-scroll-lock {
+  overflow: auto !important;
+}
