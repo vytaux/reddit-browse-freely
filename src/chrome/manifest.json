@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Reddit Browse Freely",
   "version": "1.0.0",
-  "description": "Browse Reddit without signup popups interrupting your reading.",
+  "description": "Browse Reddit freely without interruptions.",
   "permissions": [],
   "host_permissions": ["*://*.reddit.com/*"],
   "content_scripts": [
