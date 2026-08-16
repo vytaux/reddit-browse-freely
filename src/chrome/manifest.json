@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Reddit Browse Freely",
+  "version": "1.0.0",
+  "description": "Browse Reddit without signup popups interrupting your reading.",
+  "permissions": [],
+  "host_permissions": ["*://*.reddit.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.reddit.com/*"],
+      "css": ["styles.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
+}
