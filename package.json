@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "Browse Reddit without signup popups interrupting your reading.",
   "scripts": {
-    "build": "node build.js",
-    "build:chrome": "node build.js chrome",
-    "build:firefox": "node build.js firefox",
+    "build": "node build.js chrome",
     "test": "jest"
   },
   "packageManager": "pnpm@11.20.0",

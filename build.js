@@ -3,8 +3,8 @@ const path = require('path');
 
 const browser = process.argv[2];
 
-if (!browser || !['chrome', 'firefox'].includes(browser)) {
-  console.error('Usage: node build.js <chrome|firefox>');
+if (browser !== 'chrome') {
+  console.error('Usage: node build.js chrome');
   process.exit(1);
 }
 
