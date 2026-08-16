@@ -14,15 +14,16 @@ jobs:
         browser: [chrome]
 
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '24'
+      - uses: actions/checkout@v7
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: 'pnpm'
 
       - name: Install dependencies
         run: pnpm install
@@ -34,7 +35,7 @@ jobs:
         run: node build.js ${{ matrix.browser }}
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: reddit-browse-freely-${{ matrix.browser }}
           path: dist/${{ matrix.browser }}/
