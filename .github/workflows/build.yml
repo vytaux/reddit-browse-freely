@@ -1,0 +1,42 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        browser: [chrome, firefox]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run tests
+        run: pnpm test
+
+      - name: Build ${{ matrix.browser }}
+        run: node build.js ${{ matrix.browser }}
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: reddit-browse-freely-${{ matrix.browser }}
+          path: dist/${{ matrix.browser }}/
