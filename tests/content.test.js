@@ -41,14 +41,6 @@ describe('removeModalElements', () => {
 });
 
 describe('restoreScroll', () => {
-  test('clears body overflow hidden', () => {
-    document.body.style.overflow = 'hidden';
-
-    restoreScroll();
-
-    expect(document.body.style.overflow).toBe('');
-  });
-
   test('removes rpl-scroll-lock class from body', () => {
     document.body.classList.add('rpl-scroll-lock');
 

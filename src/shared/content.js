@@ -5,7 +5,6 @@ function removeModalElements() {
 }
 
 function restoreScroll() {
-  document.body.style.overflow = '';
   document.body.classList.remove('rpl-scroll-lock');
 }
 
