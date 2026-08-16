@@ -1,0 +1,5 @@
+#desktop-dynamic-upsell-dialog,
+#mobile-dynamic-upsell-dialog,
+[id*="upsell-dialog"] {
+  display: none !important;
+}
