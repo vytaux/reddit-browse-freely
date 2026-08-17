@@ -5,7 +5,7 @@ function removeModalElements() {
 }
 
 function restoreScroll() {
-  document.body.classList.remove('rpl-scroll-lock');
+  document.body?.classList.remove('rpl-scroll-lock');
 }
 
 function handleMutations(mutations) {
