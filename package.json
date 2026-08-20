@@ -1,6 +1,6 @@
 {
   "name": "reddit-browse-freely",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Browse Reddit without signup popups interrupting your reading.",
   "scripts": {
     "build": "node build.js chrome",
